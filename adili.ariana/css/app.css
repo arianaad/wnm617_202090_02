@@ -77,6 +77,8 @@ a:hover {
 .flex-align-center { align-items:center; }
 .flex-justify-center { justify-content:center; }
 
+.flex-column { flex-direction:column; }
+
 
 
 
@@ -114,4 +116,89 @@ a:hover {
     margin: 0;
     outline: 0;
     text-align: center;
+}
+
+
+
+
+
+#signin-form,
+#signup-form {
+   padding:1em;
+}
+.signin-alt {
+   padding:1em;
+   text-align:center;
+   font-size:0.8em;
+}
+#recent-page [data-role='main'] {
+   background-image:url(../img/map.jpg);
+   background-position:center;
+   background-size:cover;
+}
+
+
+
+
+
+/* PAGE LAYOUTS */
+.ui-mobile .ui-page-active {
+   display:flex;
+   flex-direction:column;
+   position:fixed;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   overflow:hidden;
+}
+[data-role='main'] {
+   flex: 1 1 100%;
+   overflow:hidden;
+   position:relative;
+}
+.ui-header,
+.ui-footer {
+   flex:none;
+   height:var(--header-height);
+   line-height:var(--header-height);
+   border-width:0;
+   background-color:var(--color-white);
+   box-shadow:0 0 5px rgba(0,0,0,0.15);
+
+   overflow:hidden;
+   position:relative;
+}
+.ui-header .ui-title {
+   margin:0;
+   padding:0;
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   text-align:center;
+}
+
+
+
+
+
+
+
+.ui-header ul,
+.ui-footer ul {
+   position:relative;
+   display:flex;
+   list-style-type:none;
+   margin:0;
+   padding:0;
+}
+.ui-footer li {
+   flex: 1 1 auto;
+   text-align:center;
+}
+.ui-header a,
+.ui-footer a {
+   display:block;
+   padding:0 1em;
 }
