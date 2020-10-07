@@ -31,4 +31,4 @@ const checkUserId = () => {
       if(p.some(o=>window.location.hash===o))
          $.mobile.navigate("#recent-page");
    }
-}e
+}
