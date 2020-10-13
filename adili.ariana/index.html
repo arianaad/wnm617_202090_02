@@ -22,7 +22,9 @@
    <section data-role="page" id="signin-page">
       <div data-role="main" class="display-flex flex-column">
          <div class="flex-stretch display-flex flex-align-center flex-justify-center">
-            <a href="images/login-img.svg"><img src="images/login-img.svg alt="></a>
+            
+
+            <img src="images/login-img.svg"></div>
          </div>
 
 
@@ -44,11 +46,17 @@
             </div>
          </form>
       </div>
+
+        <div class="modal" id="signin-warning-modal">
+         <div class="modal-toast top" data-deactivate="#signin-warning-modal">
+            <div class="message">Invalid login</div>
+         </div>
+      </div>
    </section>
 
    <section data-role="page" id="signup-page">
       <div data-role="main" class="display-flex flex-align-center flex-justify-center">
-          <a href="images/dog-signuppage.svg"><img src="images/dog-signuppage.svg alt="></a>
+          <img src="dog-signuppage.svg">
 
          <form id="signup-form" data-ajax="false">
             <div class="form-control">
@@ -82,7 +90,7 @@
    <section data-role="page" id="recent-page">
       <div data-role="main">
 
-         <img src="images/map.jpeg" alt="">
+         <img src="images/map-pin.png" alt="">
 
          <div class="floater top right">
             <div class="btn-circle" data-activate="#recent-add-modal">&equiv;</div>
@@ -111,10 +119,11 @@
       </div>
       <footer data-role="footer">
          <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
+            <li><a href="#list-page"><img src="images/list-icon.png" class="footer-icon  list-icon"></a></li>
+            <li><a href="#recent-page"> <img src="images/map-icon.png" class="footer-icon map-icon"></a></li>
+            <li><a href="#user-profile-page"> <img src="images/profile-icon.png" class="footer-icon profile-icon"></a></li>
          </ul>
+
       </footer>
    </section>
 
@@ -126,97 +135,37 @@
             <li><a href="#" data-activate="#list-add-modal">&plus;</a></li>
          </ul>
       </header>
-      <div data-role="main">
-         <div class="overscroll">
-            
-            <ul>
-            <!-- li*10>a[href=#animal-profile-page]{Animal $} -->
+       <div data-role="main">
+         <div class="overscroll"> 
+            <ul class="grid-container">
+               
+               <li><img src="images/corgi.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Corgi</a></li>
 
-         <div class="card">
-            <img src="https://via.placeholder.com/150"> 
-            <div class="container">
-               <h1>Coco</h1>
-               <h2>Poodle</h2>
-               <p>Dog info</p>
-               <button>Edit</button>
+               <li><img src="images/bichonfrise.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Bichon Frise</a></li>
+
+               <li><img src="images/dalmation.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Dalmation</a></li>
+
+               <li><img src="images/germanshepherd.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">German Shepherd</a></li>
+
+               <li><img src="images/goldendoodle.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Golden Doodle</a></li>
+               
+               <li><img src="images/goldenretriever.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Golden Retreiver</a></li>
+              </ul>
+            </div>
          </div>
-
-         <div class="card">
-            <img src="https://via.placeholder.com/150"> 
-            <div class="container">
-               <h1>Lulu</h1>
-               <h2>Corgi</h2>
-               <p>Dog info</p>
-               <button>Edit</button>
-         </div>
-
-         <div class="card">
-         <img src="https://via.placeholder.com/150"> 
-            <div class="container">
-               <h1>Comet</h1>
-               <h2>Golden doodle</h2>
-               <p>Dog info</p>
-               <button>Edit</button>
-         </div>
-
-        <div class="card">
-         <img src="https://via.placeholder.com/150"> 
-            <div class="container">
-               <h1>Lilly</h1>
-               <h2>Golden retriever</h2>
-               <p>Dog info</p>
-               <button>Edit</button>
-         </div>
-
-         <div class="card">
-         <img src="https://via.placeholder.com/150"> 
-            <div class="container">
-               <h1>Frenchie</h1>
-               <h2>French bulldog</h2>
-               <p>Dog info</p>
-               <button>Edit</button>
-         </div>
-
-         <div class="card">
-         <img src="https://via.placeholder.com/150"> 
-            <div class="container">
-               <h1>Princess</h1>
-               <h2>Yorkie</h2>
-               <p>Dog info</p>
-               <button>Edit</button>
-         </div>
-
-         <div class="card">
-         <img src="https://via.placeholder.com/150"> 
-            <div class="container">
-               <h1>Rascal</h1>
-               <h2>German shepherd</h2>
-               <p>Dog info</p>
-               <button>Edit</button>
-         </div>
-
-          <div class="card">
-         <img src="https://via.placeholder.com/150"> 
-            <div class="container">
-               <h1>Toto</h1>
-               <h2>Bichon frise</h2>
-               <p>Dog info</p>
-               <button>Edit</button>
-         </div>
+       </div>
+     </ul>
+</div>
 
 
-
-
-         </ul>
-
-         </div>
       </div>
       <footer data-role="footer">
-         <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
+          <ul>
+            <li><a href="#list-page"><img src="images/list-icon.png" class="footer-icon  list-icon"></a></li>
+            <li><a href="#recent-page"> <img src="images/map-icon.png" class="footer-icon map-icon"></a></li>
+            <li><a href="#user-profile-page"> <img src="images/profile-icon.png" class="footer-icon profile-icon"></a></li>
          </ul>
+
       </footer>
 
       <div class="modal" id="list-add-modal">
@@ -251,9 +200,9 @@
          <!-- <p><a href="#" class="js-logout">Logout</a></p> -->
 
          <form action="user-profile-page">
-            <label for="fullname">Full name</label>
+            <label for="username">Full name</label>
             
-            <input type="text" id="fullname" name="fullname" value="">
+            <input type="text" id="fullname" name="username" value="">
             <br>
             <label for="email">Email or username</label>
             <input type="text" id="email" name="email" value="">
@@ -267,18 +216,14 @@
             <a href="#recent-page">Done</a>
             
          </form>
+</div>
 
 
-
-
-
-
-      </div>
-      <footer data-role="footer">
+       <footer data-role="footer">
          <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
+            <li><a href="#list-page"><img src="images/list-icon.png" class="footer-icon  list-icon"></a></li>
+            <li><a href="#recent-page"> <img src="images/map-icon.png" class="footer-icon map-icon"></a></li>
+            <li><a href="#user-profile-page"> <img src="images/profile-icon.png" class="footer-icon profile-icon"></a></li>
          </ul>
       </footer>
    </section>

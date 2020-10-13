@@ -251,6 +251,49 @@ p {
    padding:0 1em;
 }
 
+.footer-icon {
+   width: 1em;
+   height: 1em;
+   vertical-align: text-bottom;
+   line-height: calc (var(--header-height / 3 * 2);
+
+}
+
+
+
+
+
+
+/* MODAL TOAST */
+.modal-toast {
+   position: absolute;
+   width: 50%;
+   background-color: #fff;
+   box-shadow: 1px 1px 5px rgba(0,0,0,0.15);
+   border-radius: 0.2em;
+   padding: 1em;
+   text-align: center;
+   left: 50%;
+   transition: all 0.3s;
+}
+.modal-toast.top {
+   top:1em;
+   transform: translate(-50%,-1em);
+}
+.modal-toast.bottom {
+   bottom:1em;
+   transform: translate(-50%,1em);
+}
+.modal.active .modal-toast {
+   transform: translate(-50%,0);
+   pointer-events: initial;
+}
+
+/*.message {
+  color: red;
+}
+*/
+
 
 
 
@@ -399,6 +442,23 @@ p {
 }
 
 
+/* Animal list */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 45px;
+  margin-top: 3em;
+  list-style: none;
+}
+
+
+.grid-container li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5em;
+}
 
 
 
