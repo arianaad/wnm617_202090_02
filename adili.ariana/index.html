@@ -8,6 +8,7 @@
 
    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
    <link rel="stylesheet" href="css/app.css">
+   <link href='https://css.gg/menu-right-alt.css' rel='stylesheet'>
 
    <script src="lib/js/jquery-2.2.4.min.js"></script>
 
@@ -22,10 +23,8 @@
    <section data-role="page" id="signin-page">
       <div data-role="main" class="display-flex flex-column">
          <div class="flex-stretch display-flex flex-align-center flex-justify-center">
-            
-
             <img src="images/login-img.svg"></div>
-         </div>
+          </div>
 
 
          <form id="signin-form" data-ajax="false">
@@ -47,11 +46,11 @@
          </form>
       </div>
 
-        <div class="modal" id="signin-warning-modal">
+       <!--  <div class="modal" id="signin-warning-modal">
          <div class="modal-toast top" data-deactivate="#signin-warning-modal">
             <div class="message">Invalid login</div>
          </div>
-      </div>
+      </div> -->
    </section>
 
    <section data-role="page" id="signup-page">
@@ -114,6 +113,9 @@
                <div class="modal-head">Locations</div>
                <div class="modal-body">Add a location</div>
                <div class="modal-body">Edit existing location</div>
+
+
+
             </div>
          </div>
       </div>
@@ -129,7 +131,7 @@
 
    <section data-role="page" id="list-page">
       <header data-role="header">
-         <h1>List Page</h1>
+         <h1>List page</h1>
          <ul>
             <li class="flex-stretch"></li>
             <li><a href="#" data-activate="#list-add-modal">&plus;</a></li>
@@ -159,14 +161,7 @@
 
 
       </div>
-      <footer data-role="footer">
-          <ul>
-            <li><a href="#list-page"><img src="images/list-icon.png" class="footer-icon  list-icon"></a></li>
-            <li><a href="#recent-page"> <img src="images/map-icon.png" class="footer-icon map-icon"></a></li>
-            <li><a href="#user-profile-page"> <img src="images/profile-icon.png" class="footer-icon profile-icon"></a></li>
-         </ul>
-
-      </footer>
+  
 
       <div class="modal" id="list-add-modal">
          <div class="modal-back" data-deactivate="#list-add-modal"></div>
@@ -193,33 +188,41 @@
       </div>
    </section>
 
+
+
    <section data-role="page" id="user-profile-page">
       <div data-role="main">
-         <h1>User profile</h1>
-         <h2>Tell us about you</h2>
-         <!-- <p><a href="#" class="js-logout">Logout</a></p> -->
-
-         <form action="user-profile-page">
-            <label for="username">Full name</label>
+         <div class="user-profile">
+            <div class="user-icon">
+               <img src="images/womananddog.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"></div>
             
-            <input type="text" id="fullname" name="username" value="">
-            <br>
-            <label for="email">Email or username</label>
-            <input type="text" id="email" name="email" value="">
-            <br>
-            <label for="password">Password</label>
-            <input type="text" id="password" name="password" value="">
-            <a href="#">Change password</a>
-            <br>
-            <br>
-            <br>
-            <a href="#recent-page">Done</a>
-            
-         </form>
-</div>
+            <div class="user-profile-info">
+               <h1>Ariana A.</h1>
+               <p>Location | San Francisco, CA</p>
+            </div>
 
+            <div class="user-animal-details">
+               <h1>Dogs found</h1>
+               <p>6</p>
 
-       <footer data-role="footer">
+               <h1>Number of locations</h1>
+               <p>6</p>
+            </div>
+         </div>
+
+           <!--  </div>
+              <a href="#" class="flex-none menu-icon" data-activate="#profile-menu"><img src="images/menu-icon.png"></a>
+            </div> -->
+
+      <div class="modal" id="list-add-modal">
+         <div class="modal-back" data-deactivate="#list-add-modal"></div>
+         <div class="modal-popup">
+            <div class="modal-head"><div><a href="#edit-user-page">Edit profile</a></div>
+            <div class="modal-foot"><div class="js-logout">Logout</div></div>
+         </div>
+      </div>
+
+      <footer data-role="footer">
          <ul>
             <li><a href="#list-page"><img src="images/list-icon.png" class="footer-icon  list-icon"></a></li>
             <li><a href="#recent-page"> <img src="images/map-icon.png" class="footer-icon map-icon"></a></li>
@@ -227,6 +230,8 @@
          </ul>
       </footer>
    </section>
+
+
 
    <section data-role="page" id="animal-profile-page">
       <header data-role="header">
@@ -248,6 +253,19 @@
                <button>Edit</button>
             </div>
    </div>
+
+
+<div class="modal" id="warning-modal">
+      <div class="modal-toast top" data-deactivate="#warning-modal">
+         <div class="message">Message</div>
+      </div>
+</div>
+
+
+
+
+
+
    </section>
 
 </body>

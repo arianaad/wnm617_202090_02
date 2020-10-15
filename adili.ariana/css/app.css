@@ -155,6 +155,36 @@ p {
 */
 
 
+/* User profile page */
+
+.user-icon img {
+  position: sticky;
+  border: 1.5px solid #324759;
+}
+
+.user-profile-info h1,h2,p {
+  text-align: center;
+
+}
+
+.user-animal-details {
+  text-align: center;
+}
+
+
+/* Menu bar */
+
+
+.menu-icon {
+    max-width: 100px;
+    text-align: end;
+    margin-top: 1em;
+    display: block;
+}
+
+.menu-icon img{
+   width: 25%;
+}
 
 
 
@@ -216,10 +246,9 @@ p {
    line-height:var(--header-height);
    border-width:0;
    background-color:var(--color-white);
-   box-shadow:0 0 5px rgba(0,0,0,0.15);
-
    overflow:hidden;
    position:relative;
+
 }
 .ui-header .ui-title {
    margin:0;

@@ -31,7 +31,7 @@ const checkSigninForm = () => {
       sessionStorage.removeItem('userId');
 
       
-      makeWarning("#signin-warning-modal","Invalid login")
+      makeWarning("#signin-warning-modal","Invalid username or password")
    }
 
    checkUserId();
