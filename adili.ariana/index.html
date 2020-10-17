@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,11 +80,6 @@
       </div>
    </section>
 
-
-
-
-
-
    <section data-role="page" id="recent-page">
       <div data-role="main">
 
@@ -113,9 +107,6 @@
                <div class="modal-head">Locations</div>
                <div class="modal-body">Add a location</div>
                <div class="modal-body">Edit existing location</div>
-
-
-
             </div>
          </div>
       </div>
@@ -137,7 +128,7 @@
             <li><a href="#" data-activate="#list-add-modal">&plus;</a></li>
          </ul>
       </header>
-       <div data-role="main">
+      <div data-role="main">
          <div class="overscroll"> 
             <ul class="grid-container">
                
@@ -152,13 +143,10 @@
                <li><img src="images/goldendoodle.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Golden Doodle</a></li>
                
                <li><img src="images/goldenretriever.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Golden Retreiver</a></li>
-              </ul>
-            </div>
+            </ul>
          </div>
-   
-  
-
-      <div class="modal" id="list-add-modal">
+      </div>
+      <div class="modal" id="list-add-modal"> 
          <div class="modal-back" data-deactivate="#list-add-modal"></div>
          <form id="list-add-form" data-ajax="false" class="modal-popup">
             <div class="modal-head">Add dog</div>
@@ -179,23 +167,36 @@
             <div class="modal-foot">
                <input type="submit" value="Save" data-role="none">
             </div>
-         </div>
+         </form>
       </div>
+      <footer data-role="footer">
+         <ul>
+            <li><a href="#list-page"><img src="images/list-icon.png" class="footer-icon  list-icon"></a></li>
+            <li><a href="#recent-page"> <img src="images/map-icon.png" class="footer-icon map-icon"></a></li>
+            <li><a href="#user-profile-page"> <img src="images/profile-icon.png" class="footer-icon profile-icon"></a></li>
+         </ul>
+      </footer>
    </section>
-
-
-
+   
    <section data-role="page" id="user-profile-page">
       <div data-role="main">
-         <div class="user-profile">
+         <!-- add the display flex to make it algin together -->
+         <div style="display: flex; padding: 1em;">
             <div class="user-icon">
-               <img src="images/womananddog.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"></div>
-            
+               <img src="images/womananddog.jpg" alt="" style="width:3em;height:3em;border-radius:1.5rem;">
+            </div>
+            <!-- using margin-left:auto to keep this element at right when the parent displays as flex -->
+            <div style="margin-left:auto;">
+               <a href="#" class="flex-none menu-icon" data-activate="#profile-menu" style="margin-top:0;">
+                  <img src="images/menu-icon.png" style="width: 3em;">
+               </a>
+            </div> 
+         </div>
+         <div class="user-profile">      
             <div class="user-profile-info">
                <h1>Ariana A.</h1>
                <p>Location | San Francisco, CA</p>
             </div>
-
             <div class="user-animal-details">
                <h1>Dogs found</h1>
                <p>6</p>
@@ -204,19 +205,24 @@
                <p>6</p>
             </div>
          </div>
-
-           <!--  </div>
-              <a href="#" class="flex-none menu-icon" data-activate="#profile-menu"><img src="images/menu-icon.png"></a>
-            </div> -->
-
-         <div class="modal" id="list-add-modal">
-         <div class="modal-back" data-deactivate="#list-add-modal"></div>
-         <div class="modal-popup">
-            <div class="modal-head"><div><a href="#edit-user-page">Edit profile</a></div>
-            <div class="modal-foot"><div class="js-logout">Logout</div></div>
-         </div>
       </div>
-
+      <!-- modal places outside of main if the box need to be float on the top of page (depends on design) -->
+      <!-- <style>
+       
+      </style> -->
+      <div class="modal" id="profile-menu">
+            <div class="modal-back" data-deactivate="#profile-menu"> Close </div>
+            <div class="modal-popup">
+               <div class="modal-head">
+                  <div>
+                     <a href="#edit-user-page">Edit profile</a>
+                  </div>
+               </div>
+               <div class="modal-foot">
+                  <div class="js-logout">Logout</div>
+               </div>
+            </div>
+         </div>
       <footer data-role="footer">
          <ul>
             <li><a href="#list-page"><img src="images/list-icon.png" class="footer-icon  list-icon"></a></li>
@@ -236,31 +242,29 @@
          </ul>
       </header>
       <div data-role="main">
-         Animal Profile
-      </div>
-
-    <div class="card">
-         <img src="https://via.placeholder.com/150"> 
+        <div class="card">
+         <img src="images/corgi.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Coco</a>
             <div class="container">
-               <h1>Dog name</h1>
-               <h2>Breed</h2>
-               <p>Dog info</p>
-               <button>Edit</button>
+               <p>Breed | Corgi</p>
+               <br>
+               <p>Gender | Female</p>
+               <br>
+               <p>Location | 37.7916° N, 122.4276° W</p>
             </div>
-   </div>
 
-
-<div class="modal" id="warning-modal">
-      <div class="modal-toast top" data-deactivate="#warning-modal">
-         <div class="message">Message</div>
       </div>
-</div>
-
-
-
-
-
-
+      <!-- <div class="card">
+         <img src="images/corgi.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Corgi</a>
+            <div class="container">
+               <h1>Coco</h1>
+               <h2>Breed <span>Corgi</span></h2>
+            </div>
+ -->      </div>
+      <!-- <div class="modal" id="warning-modal">
+            <div class="modal-toast top" data-deactivate="#warning-modal">
+               <div class="message">Message</div>
+            </div>
+      </div> -->
    </section>
 
 </body>
