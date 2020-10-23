@@ -8,6 +8,7 @@
    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
    <link rel="stylesheet" href="css/app.css">
    <link href='https://css.gg/menu-right-alt.css' rel='stylesheet'>
+   <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet">
 
    <script src="lib/js/jquery-2.2.4.min.js"></script>
 
@@ -22,8 +23,12 @@
    <section data-role="page" id="signin-page">
       <div data-role="main" class="display-flex flex-column">
          <div class="flex-stretch display-flex flex-align-center flex-justify-center">
-            <img src="images/login-img.svg"></div>
-          </div>
+            <img src="images/login-image.png" style="max-width: 100%;height: auto;" alt="">
+         </div>
+      <h6>PawPrints🐾</h6>
+      </div>
+
+   <div class="failure form-control dissapear" id="failure login">Invalid username or password. Try again!</div>        
 
 
          <form id="signin-form" data-ajax="false">
@@ -44,17 +49,13 @@
             </div>
          </form>
       </div>
-
-        <!-- <div class="modal" id="signin-warning-modal">
-         <div class="modal-toast top" data-deactivate="#signin-warning-modal">
-            <div class="message">Invalid login!</div>
-         </div> -->
-      </div>
    </section>
 
    <section data-role="page" id="signup-page">
-      <div data-role="main" class="display-flex flex-align-center flex-justify-center">
-          <img src="dog-signuppage.svg">
+      <!-- <div data-role="main" class="display-flex flex-align-center flex-justify-center"> -->
+         <div class="flex-stretch display-flex flex-align-center flex-justify-center">
+            <img src="images/woman-dog.png" style="max-width: 100%;height: auto;" alt="">
+         </div>
 
          <form id="signup-form" data-ajax="false">
             <div class="form-control">
@@ -83,7 +84,7 @@
    <section data-role="page" id="recent-page">
       <div data-role="main">
 
-         <img src="images/map-pinned.jpeg" alt="">
+         <img src="images/sf-map-1.png" alt="">
 
          <div class="floater top right">
             <div class="btn-circle" data-activate="#recent-add-modal">&equiv;</div>
@@ -112,7 +113,7 @@
       </div>
       <footer data-role="footer">
          <ul>
-            <li><a href="#list-page"><img src="images/list-icon.png" class="footer-icon  list-icon"></a></li>
+            <li><a href="#list-page"><img src="images/list-icon.png" class="footer-icon list-icon"></a></li>
             <li><a href="#recent-page"> <img src="images/map-icon.png" class="footer-icon map-icon"></a></li>
             <li><a href="#user-profile-page"> <img src="images/profile-icon.png" class="footer-icon profile-icon"></a></li>
          </ul>
@@ -146,29 +147,31 @@
             </ul>
          </div>
       </div>
-      <div class="modal" id="list-add-modal"> 
+
+       <div class="modal" id="list-add-modal">
          <div class="modal-back" data-deactivate="#list-add-modal"></div>
          <form id="list-add-form" data-ajax="false" class="modal-popup">
-            <div class="modal-head">Add dog</div>
+            <div class="modal-head">Add Animal</div>
             <div class="modal-body">
                <div class="form-control">
                   <label for="list-add-name" class="form-label">Name</label>
-                  <input id="list-add-name" type="text" class="form-input" data-role="none" placeholder="Type animal name">
+                  <input id="add-name" type="text" class="form-input" data-role="none" placeholder="Type animal name">
                </div>
                <div class="form-control">
                   <label for="list-add-type" class="form-label">Type</label>
-                  <input id="list-add-type" type="text" class="form-input" data-role="none" placeholder="Type animal type">
+                  <input id="add-type" type="text" class="form-input" data-role="none" placeholder="Type animal type">
                </div>
                <div class="form-control">
                   <label for="list-add-breed" class="form-label">Breed</label>
-                  <input id="list-add-breed" type="text" class="form-input" data-role="none" placeholder="Type animal breed">
+                  <input id="add-breed" type="text" class="form-input" data-role="none" placeholder="Type animal breed">
                </div>
             </div>
             <div class="modal-foot">
                <input type="submit" value="Save" data-role="none">
             </div>
-         </form>
+         </div>
       </div>
+      
       <footer data-role="footer">
          <ul>
             <li><a href="#list-page"><img src="images/list-icon.png" class="footer-icon  list-icon"></a></li>
@@ -183,34 +186,24 @@
          <!-- add the display flex to make it algin together -->
          <div style="display: flex; padding: 1em;">
             <div class="user-icon">
-               <img src="images/womananddog.jpg" alt="" style="width:3em;height:3em;border-radius:1.5rem;">
+               <img src="images/dog-userprofileimg.jpg" alt="" style="width:3em;height:3em;border-radius:1.5rem;">
             </div>
-            <!-- using margin-left:auto to keep this element at right when the parent displays as flex -->
-            <div style="margin-left:auto;">
-               <a href="#" class="flex-none menu-icon" data-activate="#profile-menu" style="margin-top:0;">
-                  <img src="images/menu-icon.png" style="width: 3em;">
-               </a>
-            </div> 
-         </div>
-         <div class="user-profile">      
-            <div class="user-profile-info">
-               <h1>Ariana A.</h1>
-               <p>Location | San Francisco, CA</p>
-            </div>
-            <div class="user-animal-details">
-               <h1>Dogs found</h1>
-               <p>6</p>
 
-               <h1>Number of locations</h1>
-               <p>6</p>
+         <form id="user-profile-form" data-ajax="false">
+             <div class="form-control">
+               <label for="user-profile-name" class="form-label">User</label>
+               <input id="user-profile-name" type="text" class="form-input" data-role="none" placeholder="Ariana A.">
+
+               <label for="user-profile-email" class="form-label">Email</label>
+               <input id="user-profile-email" type="text" class="form-input" data-role="none" placeholder="ariana@gmail.com">
             </div>
-         </div>
+         </form>
       </div>
     
        
-      </style> 
+      <!-- </style>  -->
       <div class="modal" id="profile-menu">
-            <div class="modal-back" data-deactivate="#profile-menu"> Close </div>
+            <!-- <div class="modal-back" data-deactivate="#profile-menu"> Close </div> -->
             <div class="modal-popup">
                <div class="modal-head">
                   <div>
@@ -233,37 +226,35 @@
 
 
 
+
+
    <section data-role="page" id="animal-profile-page">
       <header data-role="header">
-         <h1>Animal Page</h1>
+         <h1>Animal page</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
          </ul>
       </header>
-      <div data-role="main">
-        <div class="card">
-         <img src="images/corgi.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Coco</a>
-            <div class="container">
-               <p>Breed | Corgi</p>
-               <br>
-               <p>Gender | Female</p>
-               <br>
-               <p>Location | 37.7916° N, 122.4276° W</p>
-            </div>
 
-      </div>
-      <!-- <div class="card">
-         <img src="images/corgi.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Corgi</a>
-            <div class="container">
-               <h1>Coco</h1>
-               <h2>Breed <span>Corgi</span></h2>
+      <div data-role="main">
+         <img src="images/corgi.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Coco</a>
+
+           <form id="animal-profile-form" data-ajax="false">
+            <div class="form-control">
+
+                  <label for="animal-profile-page" class="form-label">Name</label>
+                  <input id="" type="text" class="form-input" data-role="none" placeholder="Coco">
+                  <br>
+
+                  <label for="animal-profile-page" class="form-label">Location</label>
+                  <textarea data-role="none" name="note" class="add-note">7.7596° N, 122.4269° W</textarea>
+                 
+                  <br>
+               
+                  <label for="animal-profile-page" class="form-label">Notes</label>
+                  <input type="text" id="animal-profile-page" name="add-note"><br>
             </div>
- -->      </div>
-      <!-- <div class="modal" id="warning-modal">
-            <div class="modal-toast top" data-deactivate="#warning-modal">
-               <div class="message">Message</div>
-            </div>
-      </div> -->
+         </form>
    </section>
 
 </body>

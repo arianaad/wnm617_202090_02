@@ -7,9 +7,7 @@
 
 :root {
    --font-sans: Montserrat;
-   /*--font-serif: Cambria, Georgia, serif;
-*/
-
+ 
 
    --color-neutral-lighter: #edf0ed;
    --color-neutral-light: #324759;
@@ -44,7 +42,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+ {
    font-family:var(--font-serif);
    color: var(--color-neutral-light);
 
@@ -66,7 +64,12 @@ p {
 
 }
 
-
+h6 {
+ font-family: 'Slackey', cursive;
+ text-align: center;
+ font-size: 130%;
+ color: var(--color-neutral-light);
+}
 
 
 /* Layout Classes */
@@ -109,7 +112,7 @@ p {
     display: inline-block;
     width: 100%;
     border-width: 0;
-    background-color: #fff;
+    background-color: #f1f1f1;
     border-radius: 25px;
     border: .5px solid #ECF2F8;
     font: inherit;
@@ -153,6 +156,24 @@ p {
   background-color:#F28177;
 }
 */
+
+
+/* Login failure */
+
+.dissapear{
+  display: none;
+}
+
+.failure {
+  margin-bottom: 0;
+  text-align: center;
+  color: #324759;
+  font-family: Montserrat;
+  padding: 10px;
+}
+
+
+
 
 
 /* User profile page */
@@ -374,72 +395,6 @@ p {
 }
 
 
-/* MODALS */
-.modal {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    transition: all 0.3s;
-    opacity: 0;
-    pointer-events: none;
-}
-.modal.active {
-   opacity:1;
-}
-.modal-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color:rgba(0,0,0,0.7);
-}
-
-.modal {
-  display: none;
-  position: absolute;
-  background-color: aliceblue;
-  padding: 1em;
-  width: 150px;
-  height: 150px;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-}
-          
-.modal.active{
-    display: block;
-}
-
-/* MODAL POPUP*/
-.modal-popup {
-   position:absolute;
-   top:50%;
-   left:50%;
-   transform:translate(-50%,calc(-50% + 3em));
-   transition: all 0.3s;
-   width:80vw;
-}
-.modal-body {
-    background-color: var(--color-white);
-    padding: 1em;
-}
-.modal-head, .modal-foot {
-    background-color: var(--color-neutral-lighter);
-    padding: 0.5em 1em;
-}
-
-
-.modal.active .modal-back,
-.modal.active .modal-popup {
-    pointer-events: initial;
-}
-.modal.active .modal-popup {
-   transform:translate(-50%,-50%);
-}
-
-
 /* MODAL DRAWER */
 .modal-drawer {
     position: absolute;
@@ -504,6 +459,7 @@ p {
   flex-direction: column;
   align-items: center;
   padding: 1.5em;
+  list-style: none;
 }
 
 

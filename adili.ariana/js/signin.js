@@ -31,7 +31,7 @@ const checkSigninForm = () => {
       sessionStorage.removeItem('userId');
 
       
-      makeWarning("#signin-warning-modal","Invalid username or password")
+      $( ".failure" ).removeClass( "dissapear" );
    }
 
    checkUserId();
