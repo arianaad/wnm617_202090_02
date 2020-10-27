@@ -1,3 +1,6 @@
+//konbert.com/convert
+
+
 //USER TEMPLATE
 
 [
@@ -26,7 +29,7 @@
 ]
 
 
-//ANIMAL TEMPLATE (Look over video to fix issue)
+//ANIMAL TEMPLATE (Look over video to fix issue before exporting as SQL)
 
 [
   '{{repeat(10)}}',
