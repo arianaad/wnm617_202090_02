@@ -29,7 +29,7 @@
 ]
 
 
-//ANIMAL TEMPLATE (Look over video to fix issue before exporting as SQL)
+//ANIMAL TEMPLATE 
 
 [
   '{{repeat(10)}}',
@@ -38,24 +38,11 @@
     user_id: '{{integer(1,10)}}',
     
     
-    name: '{{company()}}',
     
-    type: '{{random("dog", "horse", "cat")}}',
-    breed: function(tags) {
-      var breeds = {
-      
-        "dog":["corgi", "dalmation", "golden retriever"]
-        };
-      
-      var chosen_type = breeds [this.type];
-      var chosen_index = tags.integer (0,chosen_type.length-1);
-      return chosen_type[chosen_index];
-      
-      
-    }
+    breed: '{{random("corgi", "dalmation", "golden retriever")}}'
     
    
-  },
+  }
     
 ]
 
