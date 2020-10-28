@@ -39,9 +39,22 @@
     
     
     
-    breed: '{{random("corgi", "dalmation", "golden retriever")}}'
+    breed: '{{random("corgi", "dalmation", "golden retriever", "bichon frise", "golden doodle")}}',
     
-   
+  gender: '{{(gender(male, female)}}',
+    
+    about: '{{lorem(1, "paragraphs")}}',
+    
+    img: function (tags) {
+      return 'https://via.placeholder.com/400/' + 
+        tags.integer(700,999) +
+        '/fff/?text=' +
+        this.username;
+    },
+    
+    date_create: '{{date(new Date(2020, 0, 1), new Date(), "YYYY-MM-dd hh:mm:ss")}}'
+      
+    
   }
     
 ]
@@ -58,7 +71,18 @@
     
     
     lat : '{{floating(37.761441, -122.455052)}}',
-    lng: '{{floating(-122.455052, 37.761441)}}'
+    lng: '{{floating(-122.455052, 37.761441)}}',
+    
+    about: '{{lorem(1, "paragraphs")}}',
+    
+     img: function (tags) {
+      return 'https://via.placeholder.com/400/' + 
+        tags.integer(700,999) +
+        '/fff/?text=' +
+        this.username;
+    },
+    
+      date_create: '{{date(new Date(2020, 0, 1), new Date(), "YYYY-MM-dd hh:mm:ss")}}'
    
    
   }
