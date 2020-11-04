@@ -41,7 +41,7 @@
     
     breed: '{{random("corgi", "dalmation", "golden retriever", "bichon frise", "golden doodle")}}',
     
-  gender: '{{(gender(male, female)}}',
+    gender: '{{random("male", "female")}}',
     
     about: '{{lorem(1, "paragraphs")}}',
     

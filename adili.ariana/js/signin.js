@@ -8,9 +8,14 @@ const makeWarning = (target,message) => {
    },2000);
 }
 
+const checkSigninForm = async () => {
+   let user = $("#signin-username").val();
+   let pass = $("#signin-password").val();
+
+   console.log(user,pass)
 
 
-const checkSigninForm = () => {
+const checkSigninForm = async () => {
    let user = $("#signin-username").val();
    let pass = $("#signin-password").val();
 
