@@ -35,7 +35,8 @@
   '{{repeat(10)}}',
   {
     id: '{{index(1)}}',
-    user_id: '{{integer(1,10)}}',
+    animal_id: '{{integer(1,10)}}',
+    name: '{{firstName()}}',
     
     
     
