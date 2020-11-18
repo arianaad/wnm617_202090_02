@@ -1,7 +1,7 @@
 
 
 const makeAnimalList = templater(o=>`
-<a href="#animal-profile-page" class="animallist-item">
+<div class="animallist-item js-animal-jump" data-id="${o.id}">
    <div class="animallist-image">
       <img src="${o.img}" alt="">
    </div>
@@ -10,7 +10,7 @@ const makeAnimalList = templater(o=>`
       <div class="animallist-type"><strong>type</strong> ${o.type}</div>
       <div class="animallist-breed"><strong>breed</strong> ${o.breed}</div>
    </div>
-</a>
+</div>
 `);
 
 
@@ -35,3 +35,60 @@ const makeAnimalProfile = templater(o=>`
    <div class="profile-breed"><strong>Breed</strong>: ${o.breed}</div>
 </div>
 `);
+
+const makeAnimalPopup = o=>`
+<div class="display-flex">
+<div>
+   <img src="${o.img}" alt="" style="width:100px;height:100px">
+</div>
+<div style="padding-left:1em">
+   <div class="profile-name">${o.name}</div>
+   <div><strong>Type</strong>: ${o.type}</div>
+   <div><strong>Breed</strong>: ${o.breed}</div>
+</div>
+</div>
+<div>
+<a href="#" class="form-button js-animal-jump" data-id="${o.animal_id}">Visit</a> 
+</div>
+`;
+
+
+
+
+
+
+
+const FormControl = ({namespace,name,displayname,type,placeholder,value}) => {
+   return `<div class="form-control">
+      <label for="${namespace}-${name}" class="form-label">${displayname}</label>
+      <input id="${namespace}-${name}" type="${type}" class="form-input" data-role="none" placeholder="${placeholder}" value="${value}">
+   </div>`;
+}
+
+
+const makeAnimalProfileUpdateForm = o => `
+${FormControl({
+   namespace:"animal-edit",
+   name:"name",
+   displayname:"Name",
+   type:"text",
+   placeholder:"Type An Animal Name",
+   value:o.name
+})}
+${FormControl({
+   namespace:"animal-edit",
+   name:"type",
+   displayname:"Type",
+   type:"text",
+   placeholder:"Choose An Animal Type",
+   value:o.type
+})}
+${FormControl({
+   namespace:"animal-edit",
+   name:"breed",
+   displayname:"Breed",
+   type:"text",
+   placeholder:"Type Animal Breed",
+   value:o.breed
+})}
+`;

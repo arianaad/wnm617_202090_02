@@ -32,10 +32,10 @@
 //ANIMAL TEMPLATE 
 
 [
-  '{{repeat(10)}}',
+  '{{repeat(50)}}',
   {
     id: '{{index(1)}}',
-    animal_id: '{{integer(1,10)}}',
+    user_id: '{{integer(1,10)}}',
     name: '{{firstName()}}',
     
     
@@ -50,7 +50,7 @@
       return 'https://via.placeholder.com/400/' + 
         tags.integer(700,999) +
         '/fff/?text=' +
-        this.username;
+        this.name;
     },
     
     date_create: '{{date(new Date(2020, 0, 1), new Date(), "YYYY-MM-dd hh:mm:ss")}}'
