@@ -40,9 +40,12 @@
     
     
     
-    breed: '{{random("corgi", "dalmation", "golden retriever", "bichon frise", "golden doodle")}}',
+    breed: '{{random("Corgi", "Dalmation", "Golden Retriever", "Bichon Frise", "Golden Doodle")}}',
     
-    gender: '{{random("male", "female")}}',
+    gender: '{{random("Male", "Female")}}',
+    
+    
+    size:'{{random("Small","Medium","Large")}}',
     
     about: '{{lorem(1, "paragraphs")}}',
     
@@ -59,7 +62,6 @@
   }
     
 ]
-
 
 
 //ANIMAL LOCATION
