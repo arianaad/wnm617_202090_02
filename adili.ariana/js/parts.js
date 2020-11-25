@@ -66,7 +66,7 @@ const FormControl = ({namespace,name,displayname,type,placeholder,value}) => {
 }
 
 
-const makeAnimalProfileUpdateForm = o => `
+const makeAnimalEditForm = o => `
 ${FormControl({
    namespace:"animal-edit",
    name:"name",
@@ -91,4 +91,38 @@ ${FormControl({
    placeholder:"Type Animal Breed",
    value:o.breed
 })}
+<div class="form-control">
+   <label for="animal-edit-description" class="form-label">Description</label>
+   <textarea id="animal-edit-description" class="form-input" data-role="none" placeholder="Type animal description">${o.description}</textarea>
+</div>
+`;
+
+
+const makeUserEditForm = o => `
+<form id="user-edit-form" data-ajax="false" style="padding:1em">
+${FormControl({
+   namespace:"user-edit",
+   name:"username",
+   displayname:"Username",
+   type:"text",
+   placeholder:"Type Your Username",
+   value:o.username
+})}
+${FormControl({
+   namespace:"user-edit",
+   name:"name",
+   displayname:"Full Name",
+   type:"text",
+   placeholder:"Type Your Full Name",
+   value:o.name
+})}
+${FormControl({
+   namespace:"user-edit",
+   name:"email",
+   displayname:"Email",
+   type:"text",
+   placeholder:"Type Your Email",
+   value:o.email
+})}
+</form>
 `;
