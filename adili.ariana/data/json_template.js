@@ -31,6 +31,7 @@
 
 //ANIMAL TEMPLATE 
 
+
 [
   '{{repeat(50)}}',
   {
@@ -47,7 +48,7 @@
     
     size:'{{random("Small","Medium","Large")}}',
     
-    about: '{{lorem(1, "paragraphs")}}',
+    description: '{{lorem(1, "paragraphs")}}',
     
     img: function (tags) {
       return 'https://via.placeholder.com/400/' + 
@@ -64,6 +65,7 @@
 ]
 
 
+
 //ANIMAL LOCATION
 
 [
@@ -73,10 +75,12 @@
     animal_id: '{{integer(1,10)}}',
     
     
-    lat : '{{floating(37.761441, -122.455052)}}',
-    lng: '{{floating(-122.455052, 37.761441)}}',
+    lat: '{{floating(37.796072, 37.701525)}}',
+    lng:'{{floating(-122.526401 , -122.362700)}}',
     
-    about: '{{lorem(1, "paragraphs")}}',
+    description: '{{lorem(1, "paragraphs")}}',
+
+    
     
      img: function (tags) {
       return 'https://via.placeholder.com/400/' + 

@@ -38,25 +38,13 @@
 
 <body>
 
-   <section data-role="page" id="signin-page">
+     <section data-role="page" id="signin-page">
       <div data-role="main" class="display-flex flex-column">
          <div class="flex-stretch display-flex flex-align-center flex-justify-center">
-            <img src="images/login-image.png" style="max-width: 100%;height: auto;" alt="">
+               <img src="images/login-image.png" style="max-width: 100%;height: auto;" alt="">
          </div>
-      <h6>PawPrints🐾</h6>
-      </div>
-
-  <!--  <div class="failure form-control dissapear" id="failure login">Invalid username or password. Try again!</div>     -->    
-
-
- <div class="modal" id="warning-modal">
-      <div class="modal-toast top" data-deactivate="#warning-modal">
-         <div class="message"></div>
-      </div>
-   </div>
-
-
-
+               <h6>PawPrints🐾</h6>
+         </div>
          <form id="signin-form" data-ajax="false">
             <div class="form-control">
                <label for="signin-username" class="form-label">Username</label>
@@ -77,9 +65,98 @@
       </div>
    </section>
 
-   <section data-role="page" id="signup-page">
-      <!-- <div data-role="main" class="display-flex flex-align-center flex-justify-center"> -->
-         <div class="flex-stretch display-flex flex-align-center flex-justify-center">
+<section data-role="page" id="signup-page">
+      <div data-role="main" class="display-flex flex-align-center flex-justify-center">
+         <img src="images/woman-dog.png" style="max-width: 100%;height: auto;" alt="">
+         <form id="signup-form" data-ajax="false">
+            <div class="form-control">
+               <label for="signup-username" class="form-label">Username</label>
+               <input id="signup-username" type="text" class="form-input" data-role="none" placeholder="Type your username">
+            </div>
+            <div class="form-control">
+               <label for="signup-email" class="form-label">Email</label>
+               <input id="signup-email" type="email" class="form-input" data-role="none" placeholder="Type your email">
+            </div>
+            <div class="form-control">
+               <label for="signup-password" class="form-label">Password</label>
+               <input id="signup-password" type="password" class="form-input" data-role="none" placeholder="Type your password">
+            </div>
+            <div class="form-control">
+               <label for="signup-password-confirm" class="form-label">Confirm Password</label>
+               <input id="signup-password-confirm" type="password" class="form-input" data-role="none" placeholder="Retype your password">
+            </div>
+            <div class="form-control">
+               <input type="submit" class="form-button" value="Sign Up" data-role="none">
+            </div>
+            <div class="form-control signin-alt">
+               Already have an account?
+               <a href="#signin-page">Login.</a>
+            </div>
+         </form>
+      </div>
+   </section>
+
+
+
+
+
+   <section data-role="page" id="recent-page">
+      <div data-role="main">
+         <div class="map"></div>
+
+         <!-- <div class="floater top right">
+            <div class="btn-circle" data-activate="#recent-add-modal" data-deactivate="#recent-profile-modal">&equiv;</div>
+         </div>
+         <div class="floater bottom right">
+            <div class="btn-circle" data-toggle="#recent-profile-modal">&plus;</div>
+         </div>
+      -->
+
+
+      <div class="modal" id="recent-animal-modal">
+            <div class="modal-drawer bottom">
+               <div class="modal-close-floater top right">
+                  <div class="btn-circle" data-deactivate="#recent-animal-modal">&times;</div>
+               </div>
+               <div class="modal-head">head</div>
+               <div class="modal-body"></div>
+            </div>
+         </div>
+
+         <!-- <div class="modal" id="recent-profile-modal">
+            <div class="modal-drawer left">
+               <div class="modal-head">head</div>
+               <div class="modal-body">body</div>
+            </div>
+         </div> -->
+      </div>
+      <footer data-role="footer">
+         <ul>
+            <li><a href="#list-page"><img src="images/list-icon.png" class="footer-icon list-icon"></a></li>
+            <li><a href="#recent-page"> <img src="images/map-icon.png" class="footer-icon map-icon"></a></li>
+            <li><a href="#user-profile-page"> <img src="images/profile-icon.png" class="footer-icon profile-icon"></a></li>
+         </ul>
+
+      </footer>  
+   </section>
+
+
+  <!--  <div class="failure form-control dissapear" id="failure login">Invalid username or password. Try again!</div>     -->    
+
+
+ <!-- <div class="modal" id="warning-modal">
+      <div class="modal-toast top" data-deactivate="#warning-modal">
+         <div class="message"></div>
+      </div>
+   </div>
+ -->
+
+
+       
+
+<!--    <section data-role="page" id="signup-page">
+       <div data-role="main" class="display-flex flex-align-center flex-justify-center"> -->
+        <!--  <div class="flex-stretch display-flex flex-align-center flex-justify-center">
             <img src="images/woman-dog.png" style="max-width: 100%;height: auto;" alt="">
          </div>
 
@@ -105,11 +182,11 @@
             </div>
          </form>
       </div>
-   </section>
+   </section> -->
 
 
 
-   <section data-role="page" id="recent-page">
+   <!-- <section data-role="page" id="recent-page">
       <div data-role="main">
          <div class="map"></div>
 
@@ -120,7 +197,7 @@
          </div>
          <div class="floater bottom right">
             <div class="btn-circle" data-toggle="#recent-profile-modal">&plus;</div>
-         </div>
+         </div> -->
 
 
       <!--    <div class="modal" id="recent-add-modal">
@@ -140,14 +217,31 @@
             </div>
          </div>
       </div> -->
-      <footer data-role="footer">
-         <ul>
-            <li><a href="#list-page"><img src="images/list-icon.png" class="footer-icon list-icon"></a></li>
-            <li><a href="#recent-page"> <img src="images/map-icon.png" class="footer-icon map-icon"></a></li>
-            <li><a href="#user-profile-page"> <img src="images/profile-icon.png" class="footer-icon profile-icon"></a></li>
-         </ul>
+     
 
-      </footer>
+
+    <section data-role="page" id="list-page">
+      <header data-role="header">
+         <ul>
+            <li class="flex-stretch list-search">
+               <form class="hotdog" id="list-search-form" data-ajax="false">
+                  <input type="search" id="list-search-input" data-role="none" placeholder="Search">
+               </form>
+            </li>
+         </ul>
+      </header>
+      <header data-role="header">
+         <div class="filter-list"></div>
+      </header>
+      <div data-role="main">
+         <div class="overscroll">
+            <div class="animallist"></div>
+         </div>
+         <div class="floater right bottom">
+            <a href="#animal-add-page" class="btn-circle">&plus;</a>
+         </div>
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
 
    </section>
 
@@ -162,14 +256,15 @@
             </li>
          </ul>
       </header>
-      <header data-role="header">
+      <!-- <header data-role="header">
          <div class="filter-list">
             <div class="filter" data-field="type" data-value="all">All</div>
             <div class="filter" data-field="type" data-value="dog">Corgi</div>
             <div class="filter" data-field="type" data-value="dog">Dalmation</div>
-            <div class="filter" data-field="type" data-value="dog">Golden Retreiver</div>
+            <div class="filter" data-field="type" data-value="dog">Bichon Frise</div>
+            <div class="filter" data-field="type" data-value="dog">Golden Doodle</div>
          </div>
-      </header>
+      </header> -->
       <div data-role="main">
          <div class="overscroll">
             <div class="animallist"></div>
@@ -182,12 +277,35 @@
 
    </section>
 
-
-
-
+   <section data-role="page" id="user-profile-page">
       <div data-role="main">
+         <div class="profile"></div>
+          <div data-role="main">
+         <!-- add the display flex to make it algin together -->
+         <div style="display: flex; padding: 1em;">
+            <div class="user-icon">
+               <img src="images/dog-userprofileimg.jpg" alt="" style="width:3em;height:3em;border-radius:1.5rem;">
+            </div>
+
+         <form id="user-profile-form" data-ajax="false">
+             <div class="form-control">
+               <label for="user-profile-name" class="form-label">User</label>
+               <input id="user-profile-name" type="text" class="form-input" data-role="none" placeholder="Ariana A.">
+
+               <label for="user-profile-email" class="form-label">Email</label>
+               <input id="user-profile-email" type="text" class="form-input" data-role="none" placeholder="ariana@gmail.com">
+            </div>
+         </form>
+      </div>
+            <footer data-role="footer" data-template="#footer-template"></footer>
+   </section>
+
+
+
+
+    <!--   <div data-role="main">
          <div class="overscroll"> 
-       <!--      <ul class="grid-container">
+            <ul class="grid-container">
                
                <li><img src="images/corgi.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Corgi</a></li>
 
@@ -200,9 +318,9 @@
                <li><img src="images/goldendoodle.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Golden Doodle</a></li>
                
                <li><img src="images/goldenretriever.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Golden Retreiver</a></li>
-            </ul> -->
+            </ul>
          </div>
-      </div>
+      </div> -->
 
        <div class="modal" id="list-add-modal">
          <div class="modal-back" data-deactivate="#list-add-modal"></div>
@@ -237,10 +355,10 @@
       </footer>
    </section>
    
-   <section data-role="page" id="user-profile-page">
-      <div data-role="main">
+  <!--  <section data-role="page" id="user-profile-page">
+      <div data-role="main"> -->
          <!-- add the display flex to make it algin together -->
-         <div style="display: flex; padding: 1em;">
+         <!-- <div style="display: flex; padding: 1em;">
             <div class="user-icon">
                <img src="images/dog-userprofileimg.jpg" alt="" style="width:3em;height:3em;border-radius:1.5rem;">
             </div>
@@ -255,7 +373,7 @@
             </div>
          </form>
       </div>
-    
+     -->
        
       <!-- </style>  -->
       <div class="modal" id="profile-menu">
