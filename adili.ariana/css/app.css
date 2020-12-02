@@ -193,6 +193,113 @@ h6 {
 }
 
 
+
+/* PROFILE */
+.profile-image {
+   position:relative;
+}
+.profile-image>img {
+    border-radius: 50%;
+    width: calc(100vw - 4em);
+    height: calc(100vw - 4em);
+    object-fit: cover;
+    margin: 2em;
+}
+.profile-body {
+   padding:1em;
+}
+.profile-name {
+   font-size:1.5em;
+   margin-bottom: 1em;
+}
+#animal-profile-page .profile-image {
+   display:flex;
+   align-items:center;
+   justify-content:center;
+}
+#animal-profile-page .profile-image img {
+    width: calc(100vw - 8em);
+    height: calc(100vw - 8em);
+}
+
+
+
+
+
+.settings-list {
+   list-style-type:none;
+   margin:0;
+   padding:0;
+}
+
+.settings-item a {
+   display:block;
+   padding:0.5em 1em;
+   border-bottom:1px solid var(--color-neutral-lighter);
+   position:relative;
+}
+.settings-item a:not([href='#'])::after {
+   content:'>';
+   position:absolute;
+   top:50%;
+   right:1em;
+   transform:translateY(-50%);
+}
+
+
+/* ANIMAL LIST */
+
+
+.animallist-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    vertical-align:text-bottom;
+}
+.animallist-item {
+    display: flex;
+    margin: 1em;
+    border-radius: 1em;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.animallist-description {
+   padding:0.5em;
+}
+.animallist-type,
+.animallist-breed {
+   font-size:0.8em;
+}
+.animallist-name {
+   font-size:1.2em;
+}
+
+/* FILTER */
+
+.filter {
+  padding: 0px 0.5em;
+}
+
+.filter-list {
+  display: flex;
+}
+
+
+.nav-icon img {
+   width:1em;
+   height:1em;
+   vertical-align: text-bottom;
+}
+.nav-icon {
+   line-height:calc(var(--header-height) * 0.6);
+   font-size:1.5em;
+}
+.nav-label {
+   line-height:calc(var(--header-height) * 0.4);
+   font-size:0.7em;
+}
+
+
 /* Menu bar */
 
 
@@ -474,6 +581,7 @@ h6 {
 
 
 /* CIRCLE BUTTON */
+
 .btn-circle {
     background-color: white;
     line-height: 3rem;
@@ -486,10 +594,64 @@ h6 {
 }
 
 /* Map */
+
 .map {
   position:absolute;
   top:0;
   left:0;
   width:100%;
   height:100%;
+}
+
+/* SEARCH */
+
+.hotdog {
+  display: inline-block;
+  width: 100%;
+  background-color: blue; /*CHANGE*/
+  padding: 0.5em 1em;
+  background-origin: 0;
+  line-height: 1;
+
+}
+
+.hotdog input {
+   background-color:transparent; /*CHANGE*/
+   border-width:0;
+   font:inherit;ƒ
+   color:inherit;
+   border-radius:0;
+   padding:0;
+   margin:0;
+   width:100%;
+   flex:1;
+   outline:0;
+}
+
+.ui-header .hotdog {
+  height: calc(var(--header-height) - 0.4em;
+  vertical-align: middle;
+}
+
+.list-search {
+  display: flex;
+}
+
+/* IMAGE UPLOAD */
+
+.image-uploader.full {
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+
+   background-size:contain;
+   background-repeat:no-repeat;
+}
+.ui-mobile label.image-uploader {
+   margin:0;
+}
+.image-uploader input {
+   display:none;
 }

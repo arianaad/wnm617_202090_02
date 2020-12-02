@@ -57,7 +57,7 @@ const checkAnimalAddForm = () => {
       }
       console.log(d.id)
 
-      $("animal-add-form")[0].reset();
+      $("#animal-add-form")[0].reset();
 
       sessionStorage.animalId = d.id;
       $.mobile.navigate($("#animal-add-destination").val());
@@ -76,6 +76,110 @@ const checkAnimalEditForm = () => {
       type:'update_animal',
       params:[name,type,breed,description,sessionStorage.animalId]})
    .then(d=>{
+      if(d.error) {
+         throw d.error;
+      }
+      window.history.back();
+   })
+}
+
+
+
+const checkAnimalDelete = id => {
+   query({
+      type:'delete_animal',
+      params:[id]
+   }).then(d=>{
+      if(d.error) {
+         throw d.error;
+      }
+      window.history.back();
+   });
+}
+
+
+
+
+
+
+const checkLocationAddForm = () => {
+   let lat = $("#location-add-lat").val();
+   let lng = $("#location-add-lng").val();
+   let description = $("#location-add-description").val();
+
+   query({
+      type:'insert_location',
+      params:[sessionStorage.animalId,lat,lng,description]})
+   .then(d=>{
+      if(d.error) {
+         throw d.error;
+      }
+      $("#location-add-form")[0].reset();
+      window.history.go(-2);
+   })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+const checkSearchForm = async () => {
+   let s = $("#list-search-input").val();
+   console.log(s)
+
+   let r = await query({type:"search_animals",params:[s,sessionStorage.userId]});
+
+   drawAnimalList(r.result,'No results found');
+
+   console.log(r)
+}
+
+
+
+const checkListFilter = async (d) => {
+   let r = d.value=='all' ?
+      await query({
+         type:'animals_by_user_id',
+         params:[sessionStorage.userId]
+      }) :
+      await query({
+         type:'animal_filter',
+         params:[d.field,d.value,sessionStorage.userId]
+      });
+
+   console.log(r)
+   drawAnimalList(r.result,'No results found');
+}
+
+
+
+
+const checkUpload = file => {
+   let fd = new FormData();
+   fd.append("image",file);
+
+   return fetch('data/api.php',{
+      method:'POST',
+      body:fd
+   }).then(d=>d.json())
+}
+
+const checkUserUpload = () => {
+   let upload = $("#user-upload-image").val()
+   if(upload=="") return;
+
+   query({
+      type:'update_profile_image',
+      params:[upload,sessionStorage.userId]
+   }).then(d=>{
       if(d.error) {
          throw d.error;
       }

@@ -3,6 +3,10 @@
 <head>
 
    <meta charset="UTF-8">
+
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="mobile-web-app-capable" content="yes">
+
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>PawPrints</title>
 
@@ -13,19 +17,25 @@
 
    <script src="lib/js/jquery-2.2.4.min.js"></script>
 
-   <script src="js/forms.js"></script>
+
    <script src="js/functions.js"></script>
+   <script src="js/forms.js"></script>
    <script src="js/maps.js"></script>
    <script src="js/pages.js"></script>
    <script src="js/parts.js"></script>
    <script src="js/signin.js"></script>
    <script src="js/app.js"></script>
 
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUG4WeueOOdU2POjSki2Hs_wN1p7q7KPM" defer></script>
-
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 
+
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUG4WeueOOdU2POjSki2Hs_wN1p7q7KPM" defer></script>
+
+   
+
 </head>
+
+
 <body>
 
    <section data-role="page" id="signin-page">
@@ -97,41 +107,13 @@
       </div>
    </section>
 
-    <section data-role="page" id="signup-page">
-      <div data-role="main" class="display-flex flex-align-center flex-justify-center">
-         <form id="signup-form" data-ajax="false">
-            <div class="form-control">
-               <label for="signup-username" class="form-label">Username</label>
-               <input id="signup-username" type="text" class="form-input" data-role="none" placeholder="Type your username">
-            </div>
-            <div class="form-control">
-               <label for="signup-email" class="form-label">Email</label>
-               <input id="signup-email" type="text" class="form-input" data-role="none" placeholder="Type your email">
-            </div>
-            <div class="form-control">
-               <label for="signup-password" class="form-label">Password</label>
-               <input id="signup-password" type="password" class="form-input" data-role="none" placeholder="Type your password">
-            </div>
-            <div class="form-control">
-               <label for="signup-password-confirm" class="form-label">Confirm Password</label>
-               <input id="signup-password-confirm" type="password" class="form-input" data-role="none" placeholder="Type your password">
-            </div>
-            <div class="form-control">
-               <input type="submit" class="form-button" value="Sign Up" data-role="none">
-            </div>
-            <div class="form-control signin-alt">
-               Already have an account?
-               <a href="#signin-page">Sign In</a>
-            </div>
-         </form>
-      </div>
-   </section>
+
 
    <section data-role="page" id="recent-page">
       <div data-role="main">
          <div class="map"></div>
 
-       <!--   <img src="images/sf-map-1.png" alt=""> -->
+       
 
          <div class="floater top right">
             <div class="btn-circle" data-activate="#recent-add-modal">&equiv;</div>
@@ -166,19 +148,46 @@
          </ul>
 
       </footer>
+
    </section>
 
+    
    <section data-role="page" id="list-page">
       <header data-role="header">
-         <h1>List page</h1>
          <ul>
-            <li class="flex-stretch"></li>
-            <li><a href="#" data-activate="#list-add-modal">&plus;</a></li>
+            <li class="flex-stretch list-search">
+               <form class="hotdog" id="list-search-form" data-ajax="false">
+                  <input type="search" id="list-search-input" data-role="none" placeholder="Search">
+               </form>
+            </li>
          </ul>
       </header>
+      <header data-role="header">
+         <div class="filter-list">
+            <div class="filter" data-field="type" data-value="all">All</div>
+            <div class="filter" data-field="type" data-value="dog">Corgi</div>
+            <div class="filter" data-field="type" data-value="dog">Dalmation</div>
+            <div class="filter" data-field="type" data-value="dog">Golden Retreiver</div>
+         </div>
+      </header>
+      <div data-role="main">
+         <div class="overscroll">
+            <div class="animallist"></div>
+         </div>
+         <div class="floater right bottom">
+            <a href="#animal-add-page" class="btn-circle">&plus;</a>
+         </div>
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+
+   </section>
+
+
+
+
       <div data-role="main">
          <div class="overscroll"> 
-            <ul class="grid-container">
+       <!--      <ul class="grid-container">
                
                <li><img src="images/corgi.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Corgi</a></li>
 
@@ -191,7 +200,7 @@
                <li><img src="images/goldendoodle.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Golden Doodle</a></li>
                
                <li><img src="images/goldenretriever.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Golden Retreiver</a></li>
-            </ul>
+            </ul> -->
          </div>
       </div>
 
@@ -331,6 +340,29 @@
          </form>
       </div>
    </section>
+
+
+
+
+<section data-role="page" id="user-upload-page">
+      <header data-role="header">
+         <h1>Choose Photo</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-user-upload">Save</a></li>
+         </ul>
+
+      </header>
+      <div data-role="main">
+         <form id="user-upload-form" data-ajax="false">
+            <label class="image-uploader full">
+               <input type="file" data-role="none" id="user-upload-input">
+            </label>
+         </form>
+      </div>
+   </section>
+
 
 
 

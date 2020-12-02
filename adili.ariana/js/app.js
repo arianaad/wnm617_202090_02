@@ -20,10 +20,16 @@ $(()=>{
       switch(ui.toPage[0].id) {
          case 'recent-page': RecentPage(); break;
          case 'list-page': ListPage(); break;
+
          case 'user-profile-page': UserProfilePage(); break;
          case 'user-edit-page': UserEditPage(); break;
+         case 'user-upload-page': UserUploadPage(); break;
+
          case 'animal-profile-page': AnimalProfilePage(); break;
          case 'animal-edit-page': AnimalEditPage(); break;
+
+         case 'location-add-page': LocationAddPage(); break;
+
       }
    })
 
@@ -41,6 +47,10 @@ $(()=>{
       e.preventDefault();
       checkSignupForm();
    })
+   .on("submit","#list-search-form",function(e){
+      e.preventDefault();
+      checkSearchForm();
+   })
 
 
 
@@ -55,6 +65,9 @@ $(()=>{
    })
    .on("click",".js-user-edit",function(e){
       checkUserEditForm();
+   })
+   .on("click",".js-location-add",function(e){
+      checkLocationAddForm();
    })
 
 
@@ -73,6 +86,30 @@ $(()=>{
    .on("click",".js-location-jump",function(e){
       sessionStorage.locationId = $(this).data("id");
       $.mobile.navigate("#location-profile-page");
+   })
+   .on("click",".js-animal-delete",function(e){
+      checkAnimalDelete($(this).data("id"));
+   })
+   .on("click",".js-user-upload",function(e){
+      checkUserUpload();
+   })
+
+
+
+
+
+   .on("click",".filter",function(e){
+      checkListFilter($(this).data());
+   })
+   .on("change",".image-uploader input",function(e){
+      checkUpload(this.files[0])
+      .then(d=>{
+         console.log(d)
+         makeUploaderImage({
+            namespace:'user-upload',
+            name:d.result
+         })
+      })
    })
 
 
