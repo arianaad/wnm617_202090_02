@@ -11,14 +11,14 @@
 
    --color-neutral-lighter: #edf0ed;
    --color-neutral-light: #324759;
-;
+
    --color-neutral-mediumer: #b3bdb3;
    --color-neutral-medium: #939CA6;
 
    --color-neutral-dark: #304830;
 
    --color-main-light: #324759;
-;
+
    --color-main-medium: #6dd21d;
    --color-main-dark: #234905;
 
@@ -41,7 +41,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
+h5
  {
    font-family:var(--font-serif);
    color: var(--color-neutral-light);
@@ -334,7 +334,7 @@ h6 {
 
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba (0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width: 40%;
   justify-content: center;
@@ -412,7 +412,7 @@ h6 {
    width: 1em;
    height: 1em;
    vertical-align: text-bottom;
-   line-height: calc (var(--header-height / 3 * 2);
+   line-height: calc(var(--header-height) / 3 * 2);
 
 }
 
@@ -608,7 +608,7 @@ h6 {
 .hotdog {
   display: inline-block;
   width: 100%;
-  background-color: blue; /*CHANGE*/
+  background-color: #fff; /*CHANGE*/
   padding: 0.5em 1em;
   background-origin: 0;
   line-height: 1;
@@ -618,7 +618,7 @@ h6 {
 .hotdog input {
    background-color:transparent; /*CHANGE*/
    border-width:0;
-   font:inherit;ƒ
+   font:inherit;
    color:inherit;
    border-radius:0;
    padding:0;
@@ -629,12 +629,20 @@ h6 {
 }
 
 .ui-header .hotdog {
-  height: calc(var(--header-height) - 0.4em;
+  height: calc(var(--header-height) - 0.4em);
   vertical-align: middle;
 }
 
 .list-search {
   display: flex;
+}
+
+.list-page {
+   list-style:none;
+   padding:0;
+   margin:0;
+   margin-bottom: 8em;
+
 }
 
 /* IMAGE UPLOAD */

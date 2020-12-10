@@ -1,8 +1,10 @@
 
-const drawAnimalList = (a,empty_phrase='Hey Dummy, add an animal.') => {
+const drawAnimalList = (a,empty_phrase='Your list looks pretty empty. Click to add an animal!') => {
    $("#list-page .animallist")
       .html(a.length?makeAnimalList(a):empty_phrase);
 }
+
+
 
 
 
@@ -145,13 +147,14 @@ ${FormControl({
 
 const filterList = (animals,type) => {
    let a = [...(new Set(animals.map(o=>o[type])))];
-   return templater(o=>`<div class="filter" data-field="${type}" data-value="${o}">${o[0].toUpperCase()+o.substr(1)}</div>`)(a);
+   return templater(o=>{
+   	return `<div class="filter" data-field="${type}" data-value="${o}">${o[0].toUpperCase()+o.substr(1)}</div>`
+   })(a);
 }
 
 const makeFilterList = (animals) => {
    return `
    <div class="filter" data-field="type" data-value="all">All</div> | 
-   ${filterList(animals,'type')} | 
    ${filterList(animals,'breed')} 
    `;
 }

@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 
+  
+
    <meta charset="UTF-8">
 
    <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,15 +29,9 @@
    <script src="js/app.js"></script>
 
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
-
-
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUG4WeueOOdU2POjSki2Hs_wN1p7q7KPM" defer></script>
 
-   
-
 </head>
-
-
 <body>
 
      <section data-role="page" id="signin-page">
@@ -62,45 +58,53 @@
                <a href="#signup-page">Register now!</a>
             </div>
          </form>
-      </div>
    </section>
 
 <section data-role="page" id="signup-page">
-      <div data-role="main" class="display-flex flex-align-center flex-justify-center">
+      <div data-role="main" class="display-flex flex-align-center flex-justify-center"></div>
          <img src="images/woman-dog.png" style="max-width: 100%;height: auto;" alt="">
          <form id="signup-form" data-ajax="false">
             <div class="form-control">
                <label for="signup-username" class="form-label">Username</label>
                <input id="signup-username" type="text" class="form-input" data-role="none" placeholder="Type your username">
             </div>
+
             <div class="form-control">
                <label for="signup-email" class="form-label">Email</label>
                <input id="signup-email" type="email" class="form-input" data-role="none" placeholder="Type your email">
             </div>
+
             <div class="form-control">
                <label for="signup-password" class="form-label">Password</label>
                <input id="signup-password" type="password" class="form-input" data-role="none" placeholder="Type your password">
             </div>
+
             <div class="form-control">
                <label for="signup-password-confirm" class="form-label">Confirm Password</label>
                <input id="signup-password-confirm" type="password" class="form-input" data-role="none" placeholder="Retype your password">
             </div>
+
             <div class="form-control">
                <input type="submit" class="form-button" value="Sign Up" data-role="none">
             </div>
+
             <div class="form-control signin-alt">
                Already have an account?
                <a href="#signin-page">Login.</a>
             </div>
          </form>
-      </div>
+      
    </section>
 
 
 
 
 
-   <section data-role="page" id="recent-page">
+
+
+
+
+     <section data-role="page" id="recent-page">
       <div data-role="main">
          <div class="map"></div>
 
@@ -113,12 +117,12 @@
       -->
 
 
-      <div class="modal" id="recent-animal-modal">
+         <div class="modal" id="recent-animal-modal">
             <div class="modal-drawer bottom">
                <div class="modal-close-floater top right">
                   <div class="btn-circle" data-deactivate="#recent-animal-modal">&times;</div>
                </div>
-               <div class="modal-head">type something here</div>
+               <div class="modal-head">Your PawPrints</div>
                <div class="modal-body"></div>
             </div>
          </div>
@@ -130,27 +134,13 @@
             </div>
          </div> -->
       </div>
-      <footer data-role="footer">
-         <ul>
-            <li><a href="#list-page"><img src="images/list-icon.png" class="footer-icon list-icon"></a></li>
-            <li><a href="#recent-page"> <img src="images/map-icon.png" class="footer-icon map-icon"></a></li>
-            <li><a href="#user-profile-page"> <img src="images/profile-icon.png" class="footer-icon profile-icon"></a></li>
-         </ul>
-
-      </footer>  
+      <footer data-role="footer" data-template="#footer-template"></footer>
+      
    </section>
 
 
-  <!--  <div class="failure form-control dissapear" id="failure login">Invalid username or password. Try again!</div>     -->    
 
-
- <!-- <div class="modal" id="warning-modal">
-      <div class="modal-toast top" data-deactivate="#warning-modal">
-         <div class="message"></div>
-      </div>
-   </div>
- -->
-
+   
 
        
 
@@ -186,46 +176,15 @@
 
 
 
-   <!-- <section data-role="page" id="recent-page">
-      <div data-role="main">
-         <div class="map"></div>
-
-       
-
-         <div class="floater top right">
-            <div class="btn-circle" data-activate="#recent-add-modal">&equiv;</div>
-         </div>
-         <div class="floater bottom right">
-            <div class="btn-circle" data-toggle="#recent-profile-modal">&plus;</div>
-         </div> -->
+  
 
 
-      <!--    <div class="modal" id="recent-add-modal">
-            <div class="modal-back" data-deactivate="#recent-add-modal"></div>
-            <div class="modal-drawer right">
-               <div class="modal-head">My dogs</div>
-               <div class="modal-body">View list</div>
-               <div class="modal-body">Edit a dog profile</div>
-            </div>
-         </div>
-
-         <div class="modal" id="recent-profile-modal">
-            <div class="modal-drawer bottom">
-               <div class="modal-head">Locations</div>
-               <div class="modal-body">Add a location</div>
-               <div class="modal-body">Edit existing location</div>
-            </div>
-         </div>
-      </div> -->
-     
-
-
-    <section data-role="page" id="list-page">
+<!--     <section data-role="page" id="list-page">
       <header data-role="header">
          <ul>
             <li class="flex-stretch list-search">
                <form class="hotdog" id="list-search-form" data-ajax="false">
-                  <input type="search" id="list-search-input" data-role="none" placeholder="Search">
+                  <input type="search" id="list-search-input" data-role="none" placeholder="Search for a PawPrint">
                </form>
             </li>
          </ul>
@@ -244,19 +203,19 @@
       <footer data-role="footer" data-template="#footer-template"></footer>
 
    </section>
-
+ -->
     
    <section data-role="page" id="list-page">
       <header data-role="header">
          <ul>
             <li class="flex-stretch list-search">
                <form class="hotdog" id="list-search-form" data-ajax="false">
-                  <input type="search" id="list-search-input" data-role="none" placeholder="Search">
+                  <input type="search" id="list-search-input" data-role="none" placeholder="Search for a Pawprint">
                </form>
             </li>
          </ul>
       </header>
-      <!-- <header data-role="header">
+      <header data-role="header">
          <div class="filter-list">
             <div class="filter" data-field="type" data-value="all">All</div>
             <div class="filter" data-field="type" data-value="dog">Corgi</div>
@@ -264,7 +223,7 @@
             <div class="filter" data-field="type" data-value="dog">Bichon Frise</div>
             <div class="filter" data-field="type" data-value="dog">Golden Doodle</div>
          </div>
-      </header> -->
+      </header>
       <div data-role="main">
          <div class="overscroll">
             <div class="animallist"></div>
@@ -273,31 +232,32 @@
             <a href="#animal-add-page" class="btn-circle">&plus;</a>
          </div>
       </div>
-      <footer data-role="footer" data-template="#footer-template"></footer>
+      <footer data-role="footer" data-template="#footer-template"></footer>  
+       
 
    </section>
 
-   <section data-role="page" id="user-profile-page">
+   <section data-role="page" id="profile-page">
       <div data-role="main">
          <div class="profile"></div>
-          <div data-role="main">
          <!-- add the display flex to make it algin together -->
          <div style="display: flex; padding: 1em;">
             <div class="user-icon">
                <img src="images/dog-userprofileimg.jpg" alt="" style="width:3em;height:3em;border-radius:1.5rem;">
             </div>
 
-         <form id="user-profile-form" data-ajax="false">
-             <div class="form-control">
-               <label for="user-profile-name" class="form-label">User</label>
-               <input id="user-profile-name" type="text" class="form-input" data-role="none" placeholder="Ariana A.">
+            <!-- <form id="user-profile-form" data-ajax="false">
+                <div class="form-control">
+                  <label for="user-profile-name" class="form-label">User</label>
+                  <input id="user-profile-name" type="text" class="form-input" data-role="none" placeholder="Ariana A.">
 
-               <label for="user-profile-email" class="form-label">Email</label>
-               <input id="user-profile-email" type="text" class="form-input" data-role="none" placeholder="ariana@gmail.com">
-            </div>
-         </form>
+                  <label for="user-profile-email" class="form-label">Email</label>
+                  <input id="user-profile-email" type="text" class="form-input" data-role="none" placeholder="ariana@gmail.com">
+               </div>
+            </form> -->
+         </div>
       </div>
-            <footer data-role="footer" data-template="#footer-template"></footer>
+      <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
 
@@ -322,7 +282,7 @@
          </div>
       </div> -->
 
-       <div class="modal" id="list-add-modal">
+      <!--  <div class="modal" id="list-add-modal">
          <div class="modal-back" data-deactivate="#list-add-modal"></div>
          <form id="list-add-form" data-ajax="false" class="modal-popup">
             <div class="modal-head">Add Animal</div>
@@ -353,7 +313,7 @@
             <li><a href="#user-profile-page"> <img src="images/profile-icon.png" class="footer-icon profile-icon"></a></li>
          </ul>
       </footer>
-   </section>
+   </section> -->
    
   <!--  <section data-role="page" id="user-profile-page">
       <div data-role="main"> -->
@@ -376,9 +336,9 @@
      -->
        
       <!-- </style>  -->
-      <div class="modal" id="profile-menu">
+     <!--  <div class="modal" id="profile-menu"> -->
             <!-- <div class="modal-back" data-deactivate="#profile-menu"> Close </div> -->
-            <div class="modal-popup">
+            <!-- <div class="modal-popup">
                <div class="modal-head">
                   <div>
                      <a href="#edit-user-page">Edit profile</a>
@@ -396,14 +356,14 @@
             <li><a href="#user-profile-page"> <img src="images/profile-icon.png" class="footer-icon profile-icon"></a></li>
          </ul>
       </footer>
-   </section>
+   </section> -->
 
 
 
 
    <section data-role="page" id="settings-page">
       <header data-role="header">
-         <h1>Settings Page</h1>
+         <h1>Settings</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
          </ul>
@@ -430,6 +390,7 @@
       <div data-role="main">
          <form id="user-edit-form" data-ajax="false" style="padding:1em"></form>
       </div>
+ 
    </section>
 
    <section data-role="page" id="password-settings-page">
@@ -441,19 +402,22 @@
             <li><a href="#" data-rel="back">Save</a></li>
          </ul>
       </header>
+
       <div data-role="main" style="padding:1em">
          <form id="password-form" data-ajax="false">
             <div class="form-control">
                <label for="password-oldpassword" class="form-label">Old Password</label>
                <input id="password-oldpassword" type="text" class="form-input" data-role="none" placeholder="Type your old password">
             </div>
+
             <div class="form-control">
                <label for="password-newpassword" class="form-label">New Password</label>
                <input id="password-newpassword" type="text" class="form-input" data-role="none" placeholder="Type your new password">
             </div>
+
             <div class="form-control">
                <label for="password-confirm" class="form-label">Confirm Password</label>
-               <input id="password-confirm" type="text" class="form-input" data-role="none" placeholder="Retype your new password again">
+               <input id="password-confirm" type="text" class="form-input" data-role="none" placeholder="Type your new password again">
             </div>
          </form>
       </div>
@@ -472,8 +436,9 @@
          </ul>
 
       </header>
-      <div data-role="main">
+     <div data-role="main">
          <form id="user-upload-form" data-ajax="false">
+            <input type="hidden" id="user-upload-image">
             <label class="image-uploader full">
                <input type="file" data-role="none" id="user-upload-input">
             </label>
@@ -485,9 +450,42 @@
 
 
 
-
-
    <section data-role="page" id="animal-profile-page">
+      <header data-role="header">
+         <h1>PawPrint Page</h1>
+         <ul>
+            <li><a href="#" data-rel="back">
+               <img src="images/back-button.png" alt="" class="icon">
+            </a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#animal-edit-page">
+               <img src="images/pencil.image.png" alt="" class="icon">
+            </a></li>
+         </ul>
+      </header>
+      <div data-role="main" class="display-flex flex-column">
+         <div class="animal-top">
+            <div class="map"></div>
+            <div class="floater bottom right">
+               <a href="#location-add-page" class="btn-circle">&plus;</a>
+            </div>
+         </div>
+         <div class="animal-bottom">
+            <div class="profile"></div>
+         </div>
+         
+      </div>
+
+      <footer data-role="footer" data-template="#footer-template"></footer>  
+       
+   </section>
+
+
+
+
+
+
+   <!-- <section data-role="page" id="animal-profile-page">
       <header data-role="header">
          <h1>Animal page</h1>
          <ul>
@@ -496,37 +494,25 @@
       </header>
 
       <div data-role="main">
-         <img src="images/corgi.jpg" alt="" style="width:4em;height:4em;border-radius:2rem;"><a href="#animal-profile-page">Coco</a>
+      <a href="#animal-profile-page"></a>
 
-           <form id="animal-profile-form" data-ajax="false">
-            <div class="form-control">
+   
 
-                  <label for="animal-profile-page" class="form-label">Name</label>
-                  <input id="" type="text" class="form-input" data-role="none" placeholder="Coco">
-                  <br>
-
-                  <label for="animal-profile-page" class="form-label">Location</label>
-                  <textarea data-role="none" name="note" class="add-note">7.7596° N, 122.4269° W</textarea>
-                 
-                  <br>
-               
-                  <label for="animal-profile-page" class="form-label">Notes</label>
-                  <input type="text" id="animal-profile-page" name="add-note"><br>
-            </div>
-         </form>
-   </section>
+      <footer data-role="footer" data-template="#footer-template"></footer>  
+   </section> -->
 
       <section data-role="page" id="animal-add-page">
       <header data-role="header">
-         <h1>Animal Info</h1>
+         <h1>Your Pawprints</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#">Save</a></li>
+            <li><a href="#" class="js-animal-add">Save</a></li>
          </ul>
       </header>
       <div data-role="main" class="display-flex flex-column">
-         <form id="animal-add-form" data-ajax="false">
+         <form id="animal-add-form" data-ajax="false" style="padding:1em">
+            <input type="hidden" id="animal-add-destination" value="#list-page">
             <div class="form-control">
                <label for="animal-add-name" class="form-label">Name</label>
                <input id="animal-add-name" type="text" class="form-input" data-role="none" placeholder="Type animal name">
@@ -549,7 +535,7 @@
 
    <section data-role="page" id="animal-edit-page">
       <header data-role="header">
-         <h1>Animal Info</h1>
+         <h1>PawPrints Info</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
             <li class="flex-stretch"></li>
@@ -559,8 +545,39 @@
       <div data-role="main" class="display-flex flex-column">
          <form id="animal-edit-form" data-ajax="false" style="padding:1em"></form>
       </div>
+
    </section>
 
+
+
+
+
+
+
+
+
+   
+
+
+<!--     <div class="modal" id="warning-modal">
+      <div class="modal-toast top" data-deactivate="#warning-modal">
+         <div class="message">Message</div>
+      </div>
+   </div>
+ -->
+
+
+
+
+
+   <script type="text/template" id="footer-template">
+      
+         <ul>
+            <li><a href="#list-page"><img src="images/list-icon.png" class="footer-icon list-icon"></a></li>
+            <li><a href="#recent-page"> <img src="images/map-icon.png" class="footer-icon map-icon"></a></li>
+            <li><a href="#profile-page"> <img src="images/profile-icon.png" class="footer-icon profile-icon"></a></li>
+         </ul>
+   </script>
 
 
 </body>
