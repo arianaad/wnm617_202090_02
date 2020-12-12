@@ -83,7 +83,7 @@ const UserProfilePage = async() => {
 
    console.log(d)
 
-   $("#user-profile-page .profile")
+   $("#profile-page .profile")
       .html(makeUserProfile(d.result));
 }
 const UserEditPage = async() => {
@@ -164,13 +164,13 @@ const LocationAddPage = async() => {
 
       let posFromClick = {
          lat:e.latLng.lat(),
-         lng:e.latLng.lng(),
-         icon:"img/icon/marker.svg"
+         lng:e.latLng.lng()
+         // icon:"img/icon/marker.svg"
       };
       let posFromCenter = {
          lat:map.getCenter().lat(),
-         lng:map.getCenter().lng(),
-         icon:"img/icon/marker.svg"
+         lng:map.getCenter().lng()
+        // ` // icon:"img/icon/marker.svg"`
       };
 
       $("#location-add-lat").val(posFromClick.lat)

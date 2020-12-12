@@ -15,7 +15,7 @@ const makeAnimalList = templater(o=>`
    </div>
    <div class="animallist-description">
       <div class="animallist-name">${o.name}</div>
-      <div class="animallist-type"><strong>type</strong> ${o.type}</div>
+     
       <div class="animallist-breed"><strong>breed</strong> ${o.breed}</div>
    </div>
 </div>
@@ -42,10 +42,11 @@ const makeAnimalProfile = templater(o=>`
 </div>
 <div class="profile-body">
    <div class="profile-name">${o.name}</div>
-   <div class="profile-type"><strong>Type</strong>: ${o.type}</div>
+   <div class="profile-size"><strong>Size</strong>: ${o.size}</div>
+   <div class="profile-gender"><strong>Gender</strong>: ${o.gender}</div>
    <div class="profile-breed"><strong>Breed</strong>: ${o.breed}</div>
 </div>
-<div>
+<div class="animal-delete">
    <a href="#" class="js-animal-delete" data-id="${o.id}">Delete</a>
 </div>
 `);
@@ -57,7 +58,6 @@ const makeAnimalPopup = o=>`
 </div>
 <div style="padding-left:1em">
    <div class="profile-name">${o.name}</div>
-   <div><strong>Type</strong>: ${o.type}</div>
    <div><strong>Breed</strong>: ${o.breed}</div>
 </div>
 </div>

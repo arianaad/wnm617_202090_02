@@ -183,16 +183,16 @@ function makeStatement($data) {
             `track_users`
             (`name`,`username`,`email`,`password`,`img`,`date_create`)
             VALUES
-            ('', ?, ?, md5(?), 'https://via.placeholder.com/400/?text=USER', NOW())
+            ('',?, ?, md5(?), 'https://via.placeholder.com/400/?text=USER', NOW())
             ",$p,false);
          return ["id"=>$c->lastInsertId()];
 
       case "insert_animal":
          $r = makeQuery($c,"INSERT INTO
             `track_animals`
-            (`user_id`,`name`,`type`,`breed`,`description`,`img`,`date_create`)
+            (`user_id`,`name`,`breed`,`gender`, `size`, `description`,`img`,`date_create`)
             VALUES
-            (?, ?, ?, ?, ?, 'https://via.placeholder.com/400/?text=ANIMAL', NOW())
+            (?, ?, ?, ?, ?, ?, 'https://via.placeholder.com/400/?text=ANIMAL', NOW())
             ",$p,false);
          return ["id"=>$c->lastInsertId()];
 

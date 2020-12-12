@@ -43,14 +43,15 @@ const checkUserEditForm = () => {
 
 const checkAnimalAddForm = () => {
    let name = $("#animal-add-name").val();
-   let type = $("#animal-add-type").val();
    let breed = $("#animal-add-breed").val();
+   let gender = $("#animal-add-gender").val();
+   let size = $("#animal-add-size").val();
    let description = $("#animal-add-description").val();
 
 
    query({
       type:'insert_animal',
-      params:[sessionStorage.userId,name,type,breed,description]})
+      params:[sessionStorage.userId,name,breed, gender, size, description]})
    .then(d=>{
       if(d.error) {
          throw d.error;
@@ -106,7 +107,7 @@ const checkLocationAddForm = () => {
    let lat = $("#location-add-lat").val();
    let lng = $("#location-add-lng").val();
    let description = $("#location-add-description").val();
-
+   // console.log(lat+"_"+lng)
    query({
       type:'insert_location',
       params:[sessionStorage.animalId,lat,lng,description]})
