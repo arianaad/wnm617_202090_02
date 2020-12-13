@@ -26,7 +26,7 @@ const makeUserProfile = templater(o=>`
 <div class="profile-image">
    <img src="${o.img}" alt="">
    <div class="floater right bottom">
-      <a href="#user-upload-page"><img class="icon" src="img/icon/pencil.svg"></a>
+      <a href="#user-upload-page"><img class="icon" src=""></a>
    </div>
 </div>
 <div class="profile-body">
